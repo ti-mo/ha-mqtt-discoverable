@@ -48,6 +48,10 @@ class SensorInfo(EntityInfo):
     component: str = "sensor"
     unit_of_measurement: Optional[str] = None
     """Defines the units of measurement of the sensor, if any."""
+    state_class: Optional[str] = None
+    """Type of state. One of 'measurement', 'total' or 'total_increasing'.
+    Must be set to opt a sensor into long-term statistics. Required for sensors
+    displayed on the Energy dashboard."""
 
 
 class SwitchInfo(EntityInfo):
